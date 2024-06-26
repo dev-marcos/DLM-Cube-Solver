@@ -31,7 +31,8 @@ A implementação utilizada é a feita por [Megalomatt](https://github.com/Megal
 - **Após uma solução:** Exibe a solução encontrada e, caso o microcontrolador esteja conectado, a envia automaticamente.
 
 ### Imagens
+- **Ao abrir o app:**
+<img src="https://github.com/dev-marcos/DLM-Cube-Solver/assets/56239505/03c15287-197e-4a21-8196-843d5cebfa30" alt="Interface ao abrir o app" width="300"/>
 
-![Interface ao abrir o app](https://github.com/dev-marcos/DLM-Cube-Solver/assets/56239505/03c15287-197e-4a21-8196-843d5cebfa30)
-
-![Interface após uma solução](https://github.com/dev-marcos/DLM-Cube-Solver/assets/56239505/3fc76efb-73e9-4736-b293-9b753c67aa4f)
+- **Após uma solução:**
+<img src="https://github.com/dev-marcos/DLM-Cube-Solver/assets/56239505/3fc76efb-73e9-4736-b293-9b753c67aa4f" alt="Interface após uma solução" width="300"/>

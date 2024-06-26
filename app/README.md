@@ -32,6 +32,6 @@ A implementação utilizada é a feita por [Megalomatt](https://github.com/Megal
 
 ### Imagens
 
-![Interface ao abrir o app](app/imagem-app1.png)
+![Interface ao abrir o app](https://github.com/dev-marcos/DLM-Cube-Solver/assets/56239505/03c15287-197e-4a21-8196-843d5cebfa30)
 
-![Interface após uma solução](app/imagem-app2.png)
+![Interface após uma solução](https://github.com/dev-marcos/DLM-Cube-Solver/assets/56239505/3fc76efb-73e9-4736-b293-9b753c67aa4f)

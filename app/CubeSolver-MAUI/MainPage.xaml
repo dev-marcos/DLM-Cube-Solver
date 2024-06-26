@@ -1,0 +1,149 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://schemas.microsoft.com/dotnet/2021/maui"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="CubeSolver_MAUI.MainPage"
+             Title="DLM Cube Solver">
+    <ScrollView>
+        <VerticalStackLayout Margin="20">
+            <Frame>
+                <HorizontalStackLayout 
+                    HorizontalOptions="Center">
+                    
+                    <Button x:Name="BTN_White"
+                            Grid.Column="0"
+                            Padding="10"
+                            BackgroundColor="White"
+                            BorderColor="Black"
+                            BorderWidth="4"
+                            Clicked="BTN_Colors_Clicked"
+                            ClassId="0" />
+                    <Button x:Name="BTN_Green"
+                            Grid.Column="0"
+                            Padding="10"
+                            BackgroundColor="Green"
+                            BorderColor="Black"
+                            BorderWidth="4"
+                            Clicked="BTN_Colors_Clicked"
+                            ClassId="1" />
+                    <Button x:Name="BTN_Red"
+                            Grid.Column="0"
+                            Padding="10"
+                            BackgroundColor="Red"
+                            BorderColor="Black"
+                            BorderWidth="4"
+                            Clicked="BTN_Colors_Clicked"
+                            ClassId="2"/>
+                    <Button x:Name="BTN_Yellow"
+                            Grid.Column="0"
+                            Padding="10"
+                            BackgroundColor="Yellow"
+                            BorderColor="Black"
+                            BorderWidth="4"
+                            Clicked="BTN_Colors_Clicked"
+                            ClassId="3" />
+                    <Button x:Name="BTN_Blue"
+                            Grid.Column="0"
+                            Padding="10"
+                            BackgroundColor="Blue"
+                            BorderColor="Black"
+                            BorderWidth="4"
+                            Clicked="BTN_Colors_Clicked"
+                            ClassId="4" />
+                    <Button x:Name="BTN_Orange"
+                            Grid.Column="0"
+                            Padding="10"
+                            BackgroundColor="Orange"
+                            BorderColor="Black"
+                            BorderWidth="4"
+                            Clicked="BTN_Colors_Clicked"
+                            ClassId="5" />
+                </HorizontalStackLayout>
+            </Frame>
+
+            <Frame>
+                <Grid 
+                    RowDefinitions="35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35, 35"
+                    ColumnDefinitions="35, 35, 35, 35, 35, 35, 35, 35, 35"
+                    HorizontalOptions="Center">
+
+                    <Button x:Name="BTN_U1" Grid.Row="3" Grid.Column="3" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="0"/>
+                    <Button x:Name="BTN_U2" Grid.Row="3" Grid.Column="4" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="1"/>
+                    <Button x:Name="BTN_U3" Grid.Row="3" Grid.Column="5" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="2"/>
+                    <Button x:Name="BTN_U4" Grid.Row="4" Grid.Column="3" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="3"/>
+                    <Button x:Name="BTN_U5" Grid.Row="4" Grid.Column="4" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="4"/>
+                    <Button x:Name="BTN_U6" Grid.Row="4" Grid.Column="5" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="5"/>
+                    <Button x:Name="BTN_U7" Grid.Row="5" Grid.Column="3" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="6"/>
+                    <Button x:Name="BTN_U8" Grid.Row="5" Grid.Column="4" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="7"/>
+                    <Button x:Name="BTN_U9" Grid.Row="5" Grid.Column="5" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="8"/>
+
+                    <Button x:Name="BTN_R1" Grid.Row="5" Grid.Column="6" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="9" />
+                    <Button x:Name="BTN_R2" Grid.Row="4" Grid.Column="6" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="10"/>
+                    <Button x:Name="BTN_R3" Grid.Row="3" Grid.Column="6" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="11"/>
+                    <Button x:Name="BTN_R4" Grid.Row="5" Grid.Column="7" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="12"/>
+                    <Button x:Name="BTN_R5" Grid.Row="4" Grid.Column="7" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="13"/>
+                    <Button x:Name="BTN_R6" Grid.Row="3" Grid.Column="7" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="14"/>
+                    <Button x:Name="BTN_R7" Grid.Row="5" Grid.Column="8" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="15"/>
+                    <Button x:Name="BTN_R8" Grid.Row="4" Grid.Column="8" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="16"/>
+                    <Button x:Name="BTN_R9" Grid.Row="3" Grid.Column="8" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="17"/>
+
+                    <Button x:Name="BTN_F1" Grid.Row="6" Grid.Column="3" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="18"/>
+                    <Button x:Name="BTN_F2" Grid.Row="6" Grid.Column="4" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="19"/>
+                    <Button x:Name="BTN_F3" Grid.Row="6" Grid.Column="5" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="20"/>
+                    <Button x:Name="BTN_F4" Grid.Row="7" Grid.Column="3" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="21"/>
+                    <Button x:Name="BTN_F5" Grid.Row="7" Grid.Column="4" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="22"/>
+                    <Button x:Name="BTN_F6" Grid.Row="7" Grid.Column="5" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="23"/>
+                    <Button x:Name="BTN_F7" Grid.Row="8" Grid.Column="3" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="24"/>
+                    <Button x:Name="BTN_F8" Grid.Row="8" Grid.Column="4" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="25"/>
+                    <Button x:Name="BTN_F9" Grid.Row="8" Grid.Column="5" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="26"/>
+
+                    <Button x:Name="BTN_D1" Grid.Row="9" Grid.Column="3" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="27"/>
+                    <Button x:Name="BTN_D2" Grid.Row="9" Grid.Column="4" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="28"/>
+                    <Button x:Name="BTN_D3" Grid.Row="9" Grid.Column="5" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="29"/>
+                    <Button x:Name="BTN_D4" Grid.Row="10" Grid.Column="3" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="30"/>
+                    <Button x:Name="BTN_D5" Grid.Row="10" Grid.Column="4" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="31"/>
+                    <Button x:Name="BTN_D6" Grid.Row="10" Grid.Column="5" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="32"/>
+                    <Button x:Name="BTN_D7" Grid.Row="11" Grid.Column="3" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="33"/>
+                    <Button x:Name="BTN_D8" Grid.Row="11" Grid.Column="4" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="34"/>
+                    <Button x:Name="BTN_D9" Grid.Row="11" Grid.Column="5" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="35"/>
+
+                    <Button x:Name="BTN_L1" Grid.Row="3" Grid.Column="2" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="36"/>
+                    <Button x:Name="BTN_L2" Grid.Row="4" Grid.Column="2" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="37"/>
+                    <Button x:Name="BTN_L3" Grid.Row="5" Grid.Column="2" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="38"/>
+                    <Button x:Name="BTN_L4" Grid.Row="3" Grid.Column="1" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="39"/>
+                    <Button x:Name="BTN_L5" Grid.Row="4" Grid.Column="1" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="40"/>
+                    <Button x:Name="BTN_L6" Grid.Row="5" Grid.Column="1" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="41"/>
+                    <Button x:Name="BTN_L7" Grid.Row="3" Grid.Column="0" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="42"/>
+                    <Button x:Name="BTN_L8" Grid.Row="4" Grid.Column="0" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="43"/>
+                    <Button x:Name="BTN_L9" Grid.Row="5" Grid.Column="0" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="44"/>
+
+                    <Button x:Name="BTN_B1" Grid.Row="2" Grid.Column="5" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="45"/>
+                    <Button x:Name="BTN_B2" Grid.Row="2" Grid.Column="4" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="46"/>
+                    <Button x:Name="BTN_B3" Grid.Row="2" Grid.Column="3" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="47"/>
+                    <Button x:Name="BTN_B4" Grid.Row="1" Grid.Column="5" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="48"/>
+                    <Button x:Name="BTN_B5" Grid.Row="1" Grid.Column="4" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="49"/>
+                    <Button x:Name="BTN_B6" Grid.Row="1" Grid.Column="3" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="50"/>
+                    <Button x:Name="BTN_B7" Grid.Row="0" Grid.Column="5" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="51"/>
+                    <Button x:Name="BTN_B8" Grid.Row="0" Grid.Column="4" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="52"/>
+                    <Button x:Name="BTN_B9" Grid.Row="0" Grid.Column="3" Padding="10" BackgroundColor="Gray" BorderColor="Black" BorderWidth="3" Clicked="BTN_Facelet_Clicked" ClassId="53"/>
+
+                </Grid>
+            </Frame>
+
+            <Button Text="Reset"
+                    Clicked="BTN_Reset_Clicked"
+                    Margin="10" />
+            <Button Text="Connect" 
+                    Clicked="BTN_Connect_ClickedAsync"
+                    Margin="10" />
+            <Button Text="Solve!"
+                    Clicked="BTN_Solve_ClickedAsync"
+                    Margin="10" />
+            <Label  x:Name="LBL_Info"
+                    Text=""
+                    Margin="10" />
+        </VerticalStackLayout>
+
+    </ScrollView>
+
+
+</ContentPage>
